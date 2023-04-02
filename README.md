@@ -1,6 +1,6 @@
 # marked-smartypants
 
-Easily translates plain ASCII punctuation characters into "smart" typographic punctuation HTML entities.
+Use [smartypants](https://www.npmjs.com/package/smartypants) to easily translate plain ASCII punctuation characters into "smart" typographic punctuation HTML entities.
 
 # Usage
 
