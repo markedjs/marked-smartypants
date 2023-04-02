@@ -1,18 +1,41 @@
 import { marked } from 'marked';
-import thisExtension from '../src/index.js';
+import { markedSmartypants } from '../src/index.js';
 
-describe('this-extension', () => {
+describe('markedSmartypants', () => {
   beforeEach(() => {
     marked.setOptions(marked.getDefaults());
   });
 
-  test('no options', () => {
-    marked.use(thisExtension());
-    expect(marked('example markdown')).toBe('<p>example html</p>\n');
+  test('quotes around em', () => {
+    marked.use(markedSmartypants());
+    expect(marked('"**test**"')).toMatchInlineSnapshot(`
+"<p>&#8220;<strong>test</strong>&#8221;</p>
+"
+`);
   });
 
-  test('markdown not using this extension', () => {
-    marked.use(thisExtension());
-    expect(marked('not example markdown')).not.toBe('<p>example html</p>\n');
+  test('simple sentence', () => {
+    marked.use(markedSmartypants());
+    expect(marked('# He said, -- "A \'simple\' sentence. . ." --- unknown', { headerIds: false })).toMatchInlineSnapshot(`
+"<h1>He said, &#8211; &#8220;A &#8216;simple&#8217; sentence&#8230;&#8221; &#8212; unknown</h1>
+"
+`);
+  });
+
+  test('leaves codespan', () => {
+    marked.use(markedSmartypants());
+    expect(marked('`He said, -- "A \'simple\' sentence. . ." --- unknown`')).toMatchInlineSnapshot(`
+"<p><code>He said, -- &quot;A &#39;simple&#39; sentence. . .&quot; --- unknown</code></p>
+"
+`);
+  });
+
+  test('leaves code block', () => {
+    marked.use(markedSmartypants());
+    expect(marked('```\nHe said, -- "A \'simple\' sentence. . ." --- unknown\n```')).toMatchInlineSnapshot(`
+"<pre><code>He said, -- &quot;A &#39;simple&#39; sentence. . .&quot; --- unknown
+</code></pre>
+"
+`);
   });
 });
