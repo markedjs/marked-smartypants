@@ -1,6 +1,6 @@
 {
   "name": "marked-smartypants",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "marked extension for smartypants",
   "main": "./lib/index.cjs",
   "module": "./src/index.js",
