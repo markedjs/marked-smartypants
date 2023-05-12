@@ -1,4 +1,4 @@
-import smartypants from 'smartypants';
+import { smartypants } from 'smartypants';
 
 export function markedSmartypants() {
   return {

@@ -21,19 +21,22 @@ jobs:
       - name: Run Tests 👩🏽‍💻
         run: npm run test
 
-  Coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 'lts/*'
-      - name: Install Dependencies
-        run: npm ci
-      - name: Run Tests 👩🏽‍💻
-        run: npm run test:cover
+  # we currently test bundled files not src because of
+  # https://github.com/othree/smartypants.js/issues/19
+  #
+  # Coverage:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout Code
+  #       uses: actions/checkout@v3
+  #     - name: Install Node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 'lts/*'
+  #     - name: Install Dependencies
+  #       run: npm ci
+  #     - name: Run Tests 👩🏽‍💻
+  #       run: npm run test:cover
 
   Lint:
     runs-on: ubuntu-latest
@@ -64,7 +67,7 @@ jobs:
         run: npm run build
 
   Release:
-    needs: [Test, Coverage, Lint, Build]
+    needs: [Test, Lint, Build]
     if: |
       github.ref == 'refs/heads/main' &&
       github.event.repository.fork == false

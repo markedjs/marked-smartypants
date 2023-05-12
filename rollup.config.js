@@ -1,15 +1,14 @@
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+
 export default [
   {
     input: 'src/index.js',
     output: {
       name: 'markedSmartypants',
       file: 'lib/index.umd.js',
-      format: 'umd',
-      globals: {
-        marked: 'marked'
-      }
+      format: 'umd'
     },
-    external: ['marked']
+    plugins: [nodeResolve()]
   },
   {
     input: 'src/index.js',
@@ -17,6 +16,14 @@ export default [
       file: 'lib/index.cjs',
       format: 'cjs'
     },
-    external: ['marked']
+    plugins: [nodeResolve()]
+  },
+  {
+    input: 'src/index.js',
+    output: {
+      file: 'lib/index.mjs',
+      format: 'esm'
+    },
+    plugins: [nodeResolve()]
   }
 ];

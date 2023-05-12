@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "marked extension for smartypants",
   "main": "./lib/index.cjs",
-  "module": "./src/index.js",
+  "module": "./lib/index.mjs",
   "browser": "./lib/index.umd.js",
   "type": "module",
   "keywords": [
@@ -17,13 +17,13 @@
   ],
   "exports": {
     ".": {
-      "import": "./src/index.js",
+      "import": "./lib/index.mjs",
       "require": "./lib/index.cjs"
     }
   },
   "scripts": {
-    "test": "jest --verbose",
-    "test:cover": "jest --coverage",
+    "test": "npm run build && cross-env NODE_OPTIONS=--experimental-vm-modules jest --verbose",
+    "test:cover": "npm run build && cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "lint": "eslint .",
     "build": "rollup -c rollup.config.js"
   },
@@ -41,15 +41,14 @@
     "marked": "^4 || ^5"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
+    "@rollup/plugin-node-resolve": "^15.0.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.7",
     "@semantic-release/npm": "^10.0.3",
     "@semantic-release/release-notes-generator": "^11.0.1",
-    "babel-jest": "^29.5.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.40.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
