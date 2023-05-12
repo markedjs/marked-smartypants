@@ -14,6 +14,6 @@ export default {
       statements: 100
     }
   },
-  testRegex: /\.test\.c?js$/.source,
+  testRegex: /\.test\.[cm]?js$/.source,
   transform: {}
 };
