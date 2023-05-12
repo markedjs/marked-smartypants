@@ -64,7 +64,7 @@ jobs:
         run: npm run build
 
   Release:
-    needs: [Test, Lint, Build]
+    needs: [Test, Coverage, Lint, Build]
     if: |
       github.ref == 'refs/heads/main' &&
       github.event.repository.fork == false
