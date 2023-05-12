@@ -60,6 +60,6 @@
     "semantic-release": "^21.0.2"
   },
   "dependencies": {
-    "smartypants": "^0.1.6"
+    "smartypants": "^0.2.0"
   }
 }
