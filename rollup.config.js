@@ -16,6 +16,14 @@ export default [
       file: 'lib/index.cjs',
       format: 'cjs'
     },
-    external: ['smartypants']
+    plugins: [nodeResolve()]
+  },
+  {
+    input: 'src/index.js',
+    output: {
+      file: 'lib/index.js',
+      format: 'esm'
+    },
+    plugins: [nodeResolve()]
   }
 ];

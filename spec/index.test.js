@@ -1,5 +1,5 @@
 import { marked } from 'marked';
-import { markedSmartypants } from '../src/index.js';
+import { markedSmartypants } from '../lib/index.js';
 
 describe('markedSmartypants', () => {
   beforeEach(() => {
