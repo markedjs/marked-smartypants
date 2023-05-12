@@ -1,5 +1,6 @@
 import { marked } from 'marked';
-import { markedSmartypants } from '../lib/index.js';
 import { runTests } from './run-tests.cjs';
+await import('../lib/index.umd.js');
+const { markedSmartypants } = global.markedSmartypants;
 
 runTests(marked, markedSmartypants);
