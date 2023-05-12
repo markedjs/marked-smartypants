@@ -14,7 +14,7 @@ export default {
       statements: 100
     }
   },
-  testRegex: /\.test\.js$/.source,
+  testRegex: /\.test\.c?js$/.source,
   transform: {
     '\\.[jt]sx?$': 'babel-jest'
   }

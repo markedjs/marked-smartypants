@@ -22,8 +22,8 @@
     }
   },
   "scripts": {
-    "test": "jest --verbose",
-    "test:cover": "jest --coverage",
+    "test": "npm run build && jest --verbose",
+    "test:cover": "npm run build && jest --coverage",
     "lint": "eslint .",
     "build": "rollup -c rollup.config.js"
   },
@@ -43,6 +43,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
+    "@rollup/plugin-node-resolve": "^15.0.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
