@@ -57,7 +57,7 @@
     "jest-cli": "^29.5.0",
     "marked": "^5.1.0",
     "rollup": "^3.26.0",
-    "semantic-release": "^21.0.5"
+    "semantic-release": "^21.0.6"
   },
   "dependencies": {
     "smartypants": "^0.2.2"
