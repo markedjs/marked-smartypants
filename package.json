@@ -6,6 +6,7 @@
   "module": "./lib/index.mjs",
   "browser": "./lib/index.umd.js",
   "type": "module",
+  "types": "./src/index.d.ts",
   "keywords": [
     "marked",
     "extension",
@@ -58,11 +59,10 @@
     "jest-cli": "^29.6.2",
     "marked": "^7.0.0",
     "rollup": "^3.27.0",
-    "semantic-release": "^21.0.7"
+    "semantic-release": "^21.0.7",
+    "tsd": "^0.28.1"
   },
   "dependencies": {
-    "@types/marked": "^5.0.1",
-    "smartypants": "^0.2.2",
-    "tsd": "^0.28.1"
+    "smartypants": "^0.2.2"
   }
 }
