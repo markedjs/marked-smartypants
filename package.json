@@ -24,6 +24,7 @@
   "scripts": {
     "test": "npm run build && cross-env NODE_OPTIONS=--experimental-vm-modules jest --verbose",
     "test:cover": "npm run build && cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "test:types": "tsd -f spec/index.test-d.ts -t src/index.d.ts",
     "lint": "eslint .",
     "build": "rollup -c rollup.config.js"
   },
@@ -60,6 +61,8 @@
     "semantic-release": "^21.0.7"
   },
   "dependencies": {
-    "smartypants": "^0.2.2"
+    "@types/marked": "^5.0.1",
+    "smartypants": "^0.2.2",
+    "tsd": "^0.28.1"
   }
 }
