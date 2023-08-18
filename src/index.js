@@ -1,6 +1,8 @@
 import { smartypants } from 'smartypants';
 
-export function markedSmartypants(config = 2) {
+export function markedSmartypants({
+  config = 2
+} = {}) {
   return {
     tokenizer: {
       inlineText(src) {
