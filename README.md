@@ -14,6 +14,11 @@ import { markedSmartypants } from "marked-smartypants";
 
 marked.use(markedSmartypants());
 
+// or optionally provide smartpants configuration
+// marked.use(markedSmartypants({ config: "1" }));
+
 marked.parse("He said, -- \"A 'simple' sentence. . .\" --- unknown");
 // <p>He said, – “A ‘simple’ sentence…” — unknown</p>
 ```
+
+Information on available smartypants configurations is available [here](https://github.com/othree/smartypants.js#options-and-configuration).

@@ -1,6 +1,8 @@
 import { smartypants } from 'smartypants';
 
-export function markedSmartypants() {
+export function markedSmartypants({
+  config = 2
+} = {}) {
   return {
     tokenizer: {
       inlineText(src) {
@@ -22,7 +24,7 @@ export function markedSmartypants() {
     },
     hooks: {
       postprocess(html) {
-        return smartypants(html, 2);
+        return smartypants(html, config);
       }
     }
   };
