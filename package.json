@@ -17,10 +17,9 @@
     "src/"
   ],
   "exports": {
-    ".": {
-      "import": "./lib/index.mjs",
-      "require": "./lib/index.cjs"
-    }
+    "types": "./src/index.d.ts",
+    "import": "./lib/index.mjs",
+    "require": "./lib/index.cjs"
   },
   "scripts": {
     "test": "npm run build && cross-env NODE_OPTIONS=--experimental-vm-modules jest --verbose",
