@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/markedjs/marked-smartypants#readme",
   "peerDependencies": {
-    "marked": "^4 || ^5 || ^6 || ^7"
+    "marked": ">=4 <9"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.1.0",
@@ -56,10 +56,10 @@
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "jest-cli": "^29.6.2",
-    "marked": "^7.0.2",
+    "marked": "^8.0.0",
     "rollup": "^3.28.0",
     "semantic-release": "^21.0.7",
-    "tsd": "^0.28.1"
+    "tsd": "^0.29.0"
   },
   "dependencies": {
     "smartypants": "^0.2.2"
