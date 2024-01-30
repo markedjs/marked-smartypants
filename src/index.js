@@ -1,6 +1,6 @@
-import { smartypants } from 'smartypants';
+import { smartypants as smartypantsLib } from 'smartypants';
 
-export function markedSmartypants({
+export function smartypants({
   config = 2
 } = {}) {
   return {
@@ -24,7 +24,7 @@ export function markedSmartypants({
     },
     hooks: {
       postprocess(html) {
-        return smartypants(html, config);
+        return smartypantsLib(html, config);
       }
     }
   };

@@ -4,7 +4,7 @@ export default [
   {
     input: 'src/index.js',
     output: {
-      name: 'markedSmartypants',
+      name: 'smartypants',
       file: 'lib/index.umd.js',
       format: 'umd'
     },

@@ -1,9 +1,9 @@
 import { marked } from "marked";
-import { markedSmartypants } from "../src/index";
+import { smartypants } from "../src/index";
 
-marked.use(markedSmartypants());
-marked.use(markedSmartypants({}));
-marked.use(markedSmartypants({ config: "1" }));
-marked.use(markedSmartypants({ config: 1 }));
+marked.use(smartypants());
+marked.use(smartypants({}));
+marked.use(smartypants({ config: "1" }));
+marked.use(smartypants({ config: 1 }));
 
 marked.parse("He said, -- \"A 'simple' sentence. . .\" --- unknown");
