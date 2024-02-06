@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/markedjs/marked-smartypants#readme",
   "peerDependencies": {
-    "marked": ">=4 <12"
+    "marked": ">=4 <13"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
