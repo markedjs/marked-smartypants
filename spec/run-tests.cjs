@@ -40,7 +40,7 @@ module.exports = {
 
       test('supports config', () => {
         marked.use(markedSmartypants({
-          config: 1
+          config: 1,
         }));
         expect(marked('# He said, -- "A \'simple\' sentence. . ." --- unknown', { headerIds: false })).toMatchInlineSnapshot(`
     "<h1>He said, &#8212; &#8220;A &#8216;simple&#8217; sentence&#8230;&#8221; &#8212;- unknown</h1>
@@ -48,5 +48,5 @@ module.exports = {
     `);
       });
     });
-  }
+  },
 };

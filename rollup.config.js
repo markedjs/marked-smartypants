@@ -6,24 +6,24 @@ export default [
     output: {
       name: 'markedSmartypants',
       file: 'lib/index.umd.js',
-      format: 'umd'
+      format: 'umd',
     },
-    plugins: [nodeResolve()]
+    plugins: [nodeResolve()],
   },
   {
     input: 'src/index.js',
     output: {
       file: 'lib/index.cjs',
-      format: 'cjs'
+      format: 'cjs',
     },
-    plugins: [nodeResolve()]
+    plugins: [nodeResolve()],
   },
   {
     input: 'src/index.js',
     output: {
       file: 'lib/index.mjs',
-      format: 'esm'
+      format: 'esm',
     },
-    plugins: [nodeResolve()]
-  }
+    plugins: [nodeResolve()],
+  },
 ];
