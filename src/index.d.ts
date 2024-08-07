@@ -1,5 +1,6 @@
-import type { marked } from "marked";
-import type { MarkedExtension } from "marked";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+import type { marked } from 'marked';
+import type { MarkedExtension } from 'marked';
 
 /**
  * Use [smartypants](https://github.com/othree/smartypants.js) for "smart" typographic punctuation for things like quotes and dashes
