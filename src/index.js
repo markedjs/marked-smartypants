@@ -19,6 +19,7 @@ export function markedSmartypants({
           type: 'text',
           raw: cap[0],
           text: cap[0],
+          escaped: true,
         };
       },
     },
