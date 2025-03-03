@@ -42,7 +42,7 @@
     "marked": ">=4 <16"
   },
   "devDependencies": {
-    "@markedjs/eslint-config": "^1.0.10",
+    "@markedjs/eslint-config": "^1.0.11",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
