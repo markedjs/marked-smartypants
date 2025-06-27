@@ -7,6 +7,7 @@ module.exports = {
     [
       '@semantic-release/github',
       {
+        // Prevent comments on dependabot PRs
         successCommentCondition: '<% return issue.user.type !== "Bot"; %>',
       },
     ],
