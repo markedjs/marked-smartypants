@@ -4,7 +4,12 @@ module.exports = {
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
     '@semantic-release/npm',
-    '@semantic-release/github',
+    [
+      '@semantic-release/github',
+      {
+        successCommentCondition: '<% return issue.user.type !== "Bot"; %>',
+      },
+    ],
     '@semantic-release/git',
   ],
 };
