@@ -16,4 +16,5 @@ export default {
   },
   testRegex: /\.test\.[cm]?js$/.source,
   transform: {},
+  transformIgnorePatterns: ['/node_modules/(?!(marked)/)'],
 };
